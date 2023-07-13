@@ -1,0 +1,19 @@
+<ul class="menu">
+  <li class="menu__item">
+    <button mat-button class="menu__book-flights">Book flights</button>
+  </li>
+  <li class="menu__item"></li>
+  <li class="menu__item currency">
+    <button mat-button [matMenuTriggerFor]="currency" class="currency__button">
+      EUR
+    </button>
+    <mat-menu #currency="matMenu" class="currency-list mat-menu-autosize">
+      <button mat-menu-item class="currency-list__item">EUR</button>
+      <button mat-menu-item class="currency-list__item">USA</button>
+      <button mat-menu-item class="currency-list__item">RUB</button>
+      <button mat-menu-item class="currency-list__item">PLN</button>
+    </mat-menu>
+  </li>
+  <li class="menu__item"></li>
+  <li class="menu__item"></li>
+</ul>

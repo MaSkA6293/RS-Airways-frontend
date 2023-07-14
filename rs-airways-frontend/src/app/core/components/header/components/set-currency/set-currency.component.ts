@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { CURRENCY } from './constants';
-import { Currency } from './interfaces/currency.interface';
+import { CurrencyType } from './interfaces/currency.interface';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { AppStore } from 'src/app/redux/state.model';
+import { setCurrency } from 'src/app/redux/actions/app.actions';
+import { selectAppCurrency } from 'src/app/redux/selectors';
 
 @Component({
   selector: 'app-set-currency',
@@ -10,9 +15,16 @@ import { Currency } from './interfaces/currency.interface';
 export class SetCurrencyComponent {
   currencies = CURRENCY;
 
-  selectedCurrency: Currency = this.currencies[0];
+  // selectedCurrency: CurrencyType = this.currencies[0].name;
 
-  onSelect(currency: Currency): void {
-    this.selectedCurrency = currency;
+  currency$: Observable<CurrencyType>;
+
+  constructor(private store: Store<AppStore>) {
+    this.currency$ = store.select(selectAppCurrency);
+  }
+
+  onSelect(currency: CurrencyType): void {
+    // this.selectedCurrency = currency;
+    this.store.dispatch(setCurrency({ currency }));
   }
 }

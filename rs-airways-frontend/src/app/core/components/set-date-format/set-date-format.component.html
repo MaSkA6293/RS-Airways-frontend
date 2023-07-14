@@ -2,17 +2,10 @@
   {{ selectedFormat.name }}
 </button>
 <mat-menu #dateFormat="matMenu" class="date-format-list mat-menu-autosize">
-  <button
+  <app-date-format-item
     *ngFor="let format of formats"
-    mat-menu-item
-    class="date-format-list__item"
     (click)="this.onSelect(format)"
-  >
-    {{ format.name }}
-    <mat-icon
-      class="date-format-list__item-icon"
-      [class.active]="format === selectedFormat"
-      >check</mat-icon
-    >
-  </button>
+    [format]="format"
+    [isActive]="format === selectedFormat"
+  ></app-date-format-item>
 </mat-menu>

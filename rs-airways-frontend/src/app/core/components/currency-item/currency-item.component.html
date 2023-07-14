@@ -1,0 +1,8 @@
+<button
+  *ngIf="currency"
+  mat-menu-item
+  class="currency-item"
+  [class.active]="isActive"
+>
+  {{ currency.name }}
+</button>

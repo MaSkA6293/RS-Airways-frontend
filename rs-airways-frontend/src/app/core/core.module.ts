@@ -8,6 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { SetDateFormatComponent } from './components/set-date-format/set-date-format.component';
 import { SetCurrencyComponent } from './components/set-currency/set-currency.component';
+import { MenuRegularComponent } from './components/menu-regular/menu-regular.component';
+import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
+import { DateFormatItemComponent } from './components/date-format-item/date-format-item.component';
+import { CurrencyItemComponent } from './components/currency-item/currency-item.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,11 @@ import { SetCurrencyComponent } from './components/set-currency/set-currency.com
     HeaderMenuComponent,
     SetDateFormatComponent,
     SetCurrencyComponent,
+    MenuRegularComponent,
+    MenuMobileComponent,
+    DateFormatItemComponent,
+    CurrencyItemComponent,
+    SignInComponent,
   ],
   imports: [CommonModule, AngularMaterialModule, BrowserAnimationsModule],
   exports: [HeaderComponent],

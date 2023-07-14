@@ -8,6 +8,7 @@ header {
 
   .wrapper {
     max-width: 1440px;
+    min-width: 320px;
     width: 100%;
     margin: 0 auto;
   }
@@ -17,5 +18,10 @@ header {
     justify-content: space-between;
     max-width: 1128px;
     margin: 0 auto;
+    transition: all 0.3 ease;
+
+    @media (max-width: 1128px) {
+      padding-left: 10px;
+    }
   }
 }

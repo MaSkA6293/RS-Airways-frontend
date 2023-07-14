@@ -12,5 +12,6 @@ export const initialState: AppState = {
 export const appReducer = createReducer(
   initialState,
   on(setDateFormat, (state) => state),
-  on(setCurrency, (state) => state),
+  on(setCurrency, (state, { currency }) => ({ ...state, currency })),
+  on(setDateFormat, (state, { dateFormat }) => ({ ...state, dateFormat })),
 );

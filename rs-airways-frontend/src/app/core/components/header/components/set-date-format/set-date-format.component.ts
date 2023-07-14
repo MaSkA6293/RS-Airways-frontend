@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
-import { Format } from './interfaces/format.interface';
+import { DateFormat } from './interfaces/format.interface';
 import { FORMATS } from './constants';
+import { setDateFormat } from 'src/app/redux/actions/app.actions';
+import { Observable } from 'rxjs';
+import { selectAppStateFormat } from 'src/app/redux/selectors';
+import { AppStore } from 'src/app/redux/state.model';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-set-date-format',
@@ -10,9 +15,13 @@ import { FORMATS } from './constants';
 export class SetDateFormatComponent {
   formats = FORMATS;
 
-  selectedFormat: Format = this.formats[0];
+  dateFormat$: Observable<DateFormat>;
 
-  onSelect(format: Format): void {
-    this.selectedFormat = format;
+  constructor(private store: Store<AppStore>) {
+    this.dateFormat$ = store.select(selectAppStateFormat);
+  }
+
+  onSelect(dateFormat: DateFormat): void {
+    this.store.dispatch(setDateFormat({ dateFormat }));
   }
 }

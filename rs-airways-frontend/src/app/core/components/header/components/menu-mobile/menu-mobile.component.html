@@ -19,18 +19,18 @@
 <mat-menu #dateFormat="matMenu">
   <app-date-format-item
     *ngFor="let format of formats"
-    (click)="this.onSelectFormat(format)"
+    (click)="this.onSelectFormat(format.name)"
     [format]="format"
-    [isActive]="format === selectedFormat"
+    [isActive]="format.name === (dateFormat$ | async)"
   ></app-date-format-item>
 </mat-menu>
 
 <mat-menu #currency="matMenu">
   <app-currency-item
     *ngFor="let currency of currencies"
-    (click)="this.onSelectCurrency(currency)"
+    (click)="this.onSelectCurrency(currency.name)"
     [currency]="currency"
-    [isActive]="currency === selectedCurrency"
+    [isActive]="currency.name === (currency$ | async)"
   ></app-currency-item>
 </mat-menu>
 

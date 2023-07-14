@@ -5,7 +5,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularMaterialModule } from '../mat/angular-material.module';
+import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { SetDateFormatComponent } from './components/set-date-format/set-date-format.component';
 import { SetCurrencyComponent } from './components/set-currency/set-currency.component';
 

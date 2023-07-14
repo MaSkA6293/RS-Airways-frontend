@@ -6,9 +6,15 @@ import { HeaderMenuComponent } from './components/header-menu/header-menu.compon
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatModule } from '../mat/mat.module';
+import { SetDateFormatComponent } from './components/set-date-format/set-date-format.component';
 
 @NgModule({
-  declarations: [HeaderComponent, LogoComponent, HeaderMenuComponent],
+  declarations: [
+    HeaderComponent,
+    LogoComponent,
+    HeaderMenuComponent,
+    SetDateFormatComponent,
+  ],
   imports: [CommonModule, MatModule, BrowserAnimationsModule],
   exports: [HeaderComponent],
 })

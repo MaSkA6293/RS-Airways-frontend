@@ -1,0 +1,18 @@
+.currency-button {
+  width: 64px;
+  height: 40px;
+  color: #fff;
+  border-radius: 4px;
+  border: 0.5px solid #cecece;
+  background: rgba(241, 243, 246, 0.15);
+}
+
+.currency-list {
+  &__item.active {
+    background: rgba(0, 0, 0, 0.04);
+  }
+}
+
+::ng-deep.currency-list.mat-mdc-menu-panel.mat-mdc-menu-panel {
+  min-width: 64px !important;
+}

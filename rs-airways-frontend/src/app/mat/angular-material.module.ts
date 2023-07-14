@@ -10,4 +10,4 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [CommonModule, MatButtonModule, MatMenuModule, MatIconModule],
   exports: [CommonModule, MatButtonModule, MatMenuModule, MatIconModule],
 })
-export class MatModule {}
+export class AngularMaterialModule {}

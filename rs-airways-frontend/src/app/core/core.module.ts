@@ -5,7 +5,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatModule } from '../mat/mat.module';
+import { AngularMaterialModule } from '../mat/angular-material.module';
 import { SetDateFormatComponent } from './components/set-date-format/set-date-format.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { SetDateFormatComponent } from './components/set-date-format/set-date-fo
     HeaderMenuComponent,
     SetDateFormatComponent,
   ],
-  imports: [CommonModule, MatModule, BrowserAnimationsModule],
+  imports: [CommonModule, AngularMaterialModule, BrowserAnimationsModule],
   exports: [HeaderComponent],
 })
 export class CoreModule {}

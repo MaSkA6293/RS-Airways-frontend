@@ -1,0 +1,14 @@
+<button mat-button [matMenuTriggerFor]="currency" class="currency-button">
+  {{ currency$ | async }}
+</button>
+<mat-menu #currency="matMenu" class="currency-list mat-menu-autosize">
+  <button
+    mat-menu-item
+    class="currency-list__item"
+    *ngFor="let currency of currencies"
+    [class.active]="currency.name === (currency$ | async)"
+    (click)="onSelect(currency.name)"
+  >
+    {{ currency.name }}
+  </button>
+</mat-menu>

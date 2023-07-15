@@ -1,0 +1,11 @@
+.date-format-item {
+  display: flex;
+  justify-content: flex-start;
+}
+.date-format-item-icon {
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+}

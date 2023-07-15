@@ -1,0 +1,11 @@
+<button mat-button [matMenuTriggerFor]="dateFormat" class="date-format-button">
+  {{ dateFormat$ | async }}
+</button>
+<mat-menu #dateFormat="matMenu" class="date-format-list mat-menu-autosize">
+  <app-date-format-item
+    *ngFor="let format of formats"
+    (click)="this.onSelect(format.name)"
+    [format]="format"
+    [isActive]="format.name === (dateFormat$ | async)"
+  ></app-date-format-item>
+</mat-menu>

@@ -1,0 +1,57 @@
+<button
+  mat-icon-button
+  [matMenuTriggerFor]="mobile1"
+  class="menu-mobile"
+  aria-label="Example icon-button with a menu"
+>
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #mobile1="matMenu">
+  <button mat-menu-item>Book flights</button>
+  <button mat-menu-item [matMenuTriggerFor]="dateFormat">Date format</button>
+  <button mat-menu-item [matMenuTriggerFor]="currency">Currency</button>
+  <button mat-menu-item class="sign-in">
+    <div class="sign-in__image"></div>
+    <span>Sign In</span>
+  </button>
+</mat-menu>
+
+<mat-menu #dateFormat="matMenu">
+  <app-date-format-item
+    *ngFor="let format of formats"
+    (click)="this.onSelectFormat(format.name)"
+    [format]="format"
+    [isActive]="format.name === (dateFormat$ | async)"
+  ></app-date-format-item>
+</mat-menu>
+
+<mat-menu #currency="matMenu">
+  <app-currency-item
+    *ngFor="let currency of currencies"
+    (click)="this.onSelectCurrency(currency.name)"
+    [currency]="currency"
+    [isActive]="currency.name === (currency$ | async)"
+  ></app-currency-item>
+</mat-menu>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <button mat-button class="menu__book-flights">Book flights</button>
+  </button>
+  <button mat-menu-item>
+    <app-set-date-format></app-set-date-format>
+  </button>
+  <button mat-menu-item>
+    <app-set-currency></app-set-currency>
+  </button>
+
+  <button mat-menu-item>
+    <button mat-button class="menu__sign-in sign-in">
+      <div class="sign-in__image"></div>
+      <span class="sign-in__title">Sign in</span>
+    </button>
+  </button>
+  <button mat-menu-item>
+    <button mat-button class="menu__cart"></button>
+  </button>
+</mat-menu>

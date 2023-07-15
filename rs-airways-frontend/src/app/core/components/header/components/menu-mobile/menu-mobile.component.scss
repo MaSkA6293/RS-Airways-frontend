@@ -1,0 +1,25 @@
+.menu-mobile {
+  @media (min-width: 800px) {
+    display: none;
+  }
+}
+
+.sign-in {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+
+  &__image {
+    width: 24px;
+    height: 24px;
+    background: url('./assets/sign-in.svg') center center;
+    fill: black;
+  }
+}
+
+::ng-deep.mdc-list-item__primary-text {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: flex-end;
+}

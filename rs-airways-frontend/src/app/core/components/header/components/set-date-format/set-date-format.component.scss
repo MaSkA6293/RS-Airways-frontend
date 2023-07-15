@@ -1,0 +1,38 @@
+::ng-deep.date-format-list.mat-mdc-menu-panel.mat-mdc-menu-panel {
+  min-width: 184px !important;
+}
+
+.date-format-list {
+  width: 400px;
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__item-icon {
+    opacity: 0;
+  }
+
+  &__item-icon.active {
+    opacity: 1;
+  }
+}
+
+.date-format-button {
+  height: 40px;
+  width: 162px;
+  color: #fff;
+  border-radius: 4px;
+  border: 0.5px solid #cecece;
+  background: rgba(241, 243, 246, 0.15);
+}
+
+::ng-deep.mat-mdc-menu-item.mdc-list-item {
+  flex-direction: row-reverse;
+}
+
+::ng-deep.mat-mdc-menu-item .mat-icon {
+  margin-right: 0;
+  margin-left: 16px;
+}

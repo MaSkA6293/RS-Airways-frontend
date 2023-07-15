@@ -1,0 +1,9 @@
+.currency-item {
+  &.active {
+    background: rgba(0, 0, 0, 0.04);
+  }
+}
+
+::ng-deep.mat-mdc-menu-panel.mat-mdc-menu-panel {
+  min-width: 64px !important;
+}

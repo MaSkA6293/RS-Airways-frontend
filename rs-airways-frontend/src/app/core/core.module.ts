@@ -13,6 +13,7 @@ import { SignInComponent } from './components/header/components/sign-in/sign-in.
 import { CurrencyItemComponent } from './components/header/components/currency-item/currency-item.component';
 import { DateFormatItemComponent } from './components/header/components/date-format-item/date-format-item.component';
 import { MenuMobileComponent } from './components/header/components/menu-mobile/menu-mobile.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,9 @@ import { MenuMobileComponent } from './components/header/components/menu-mobile/
     DateFormatItemComponent,
     CurrencyItemComponent,
     SignInComponent,
+    FooterComponent,
   ],
   imports: [CommonModule, AngularMaterialModule, BrowserAnimationsModule],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent, FooterComponent],
 })
 export class CoreModule {}

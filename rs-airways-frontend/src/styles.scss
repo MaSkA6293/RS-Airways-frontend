@@ -1,5 +1,10 @@
 @import '~normalize.css';
 
+:root {
+  --secondary-40: #d0d9df;
+  --neutral-neutral-100: #fff;
+}
+
 html,
 body {
   height: 100%;
@@ -7,4 +12,6 @@ body {
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+  min-width: 320px;
+  overflow-x: hidden;
 }
